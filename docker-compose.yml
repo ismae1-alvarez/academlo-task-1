@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  myDB:
+    image: postgres:latest
+    hostname: my-database
+    restart: always
+    environment:
+      - POSTGRES_DB=course-db
+      - POSTGRES_USER=alumno
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - "5434:5432"
